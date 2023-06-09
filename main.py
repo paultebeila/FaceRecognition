@@ -1,5 +1,6 @@
 import cv2
 import os
+import pickle
 
 cap = cv2.VideoCapture(0)
 cap.set(3, 640)
@@ -17,6 +18,17 @@ for path in modePathList:
     
     
 # print(len(imgModeList))
+
+#Load the encoding file
+print("Loading encoded file")
+file = open('encodeFile.p', 'rb')
+encodeListKnownWithIds = pickle.load(file)
+file.close()
+
+encodeListKnown, studentId = encodeListKnownWithIds
+
+# print(studentId)
+print("Encoded file loaded")
 
 while True:
     success, img = cap.read()
