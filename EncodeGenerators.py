@@ -10,8 +10,13 @@ from firebase_admin import storage
 
 cred = credentials.Certificate("serviceAccountKey.json")
 firebase_admin.initialize_app(cred,{
-    'databaseURL':"https://face-known-default-rtdb.firebaseio.com/",
-    'storageBucket':"face-known.appspot.com"
+    # 'databaseURL':"https://face-known-default-rtdb.firebaseio.com/",
+    # 'databaseURL':"https://attendingclas-default-rtdb.firebaseio.com/",
+    'databaseURL': "https://smartattendans-default-rtdb.firebaseio.com",
+    # 'storageBucket':"face-known.appspot.com"
+    # 'storageBucket':"attendingclas.appspot.com"
+    'storageBucket': "smartattendans.appspot.com",
+    
 })
 
 
